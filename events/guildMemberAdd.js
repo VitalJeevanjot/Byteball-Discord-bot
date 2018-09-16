@@ -11,8 +11,8 @@ module.exports = (client, member) => {
   let attr = { //Byteball user account id
     byte_address: "Addr_" + randi().toString(), // unique
     user_id: "NewUser_" + randi().toString(), // unique
-    discord_id: member.user.id, // Simple
-    logged_in: true
+    _id: member.user.id, // Simple
+    logged_in: true,
   }
 
   client.dbo.collection("ByteballUsers_Name").insertOne(attr, (err, res) => {
@@ -22,9 +22,10 @@ module.exports = (client, member) => {
   });
   // !use command databse
   let attr2 = { //Byteball user account id
+    //Make discord_id primary key user won't keep leaving and adding byteball server and makingdata bigger
     byte_address: "Addr_" + randi().toString(), //Adding any value won't matter at all
     wif: "NewUser_" + randi().toString(), // Can add any value
-    discord_id: member.user.id, // Simple
+    _id: member.user.id, // Simple
     logged_in: true
   }
   client.dbo.collection("ByteballUsers_Use").insertOne(attr2, (err, res) => {

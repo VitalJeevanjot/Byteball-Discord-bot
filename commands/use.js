@@ -3,7 +3,7 @@
 exports.run = (client, message, args) => {
   if (args.length == 2) {
     let query = {
-      discord_id: message.author.id
+      _id: message.author.id
     }
     let attr = {
       $set: {
@@ -18,14 +18,14 @@ exports.run = (client, message, args) => {
             color: 0xff5000,
             description: "An error occured!"
           }
-        }).catch(err => client.guild.send(`${member.user} There is a problem occuring while connecting with you. Turn your communication with guild members on.`));;
+        });
       } else {
         message.channel.send({
           embed: {
             color: 0xffe100,
             description: "Data updated successfully with given values. Make sure to give right `Byteball address` and `wif`."
           }
-        }).catch(err => client.guild.send(`${member.user} There is a problem occuring while connecting with you. Turn your communication with guild members on.`));;
+        });
       }
     });
 
@@ -39,6 +39,6 @@ exports.run = (client, message, args) => {
         color: 0xff5000,
         description: "Please checkout command format with `!help` command"
       }
-    }).catch(err => client.guild.send(`${member.user} There is a problem occuring while connecting with you. Turn your communication with guild members on.`));;
+    });
   }
 }

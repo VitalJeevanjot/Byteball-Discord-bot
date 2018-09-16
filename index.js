@@ -38,7 +38,7 @@ MongoClient.connect(url, {
   });
 
   client.dbo.createCollection("ByteballUsers_records", function(err, res) {
-    //Manages based on type= payment, vote [sender byteball address, receiver byteball address] , [ poll creator byteball address, boter byteball address]
+    //Manages based on type= payment,assets, vote [sender byteball address, receiver byteball address] , [ poll creator byteball address, boter byteball address]
     if (err) throw err;
   });
 
