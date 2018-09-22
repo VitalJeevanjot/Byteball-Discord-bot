@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
     }
     let attr = {
       $set: {
-        byte_address: args[0],
+        byteaddress: args[0],
         wif: args[1]
       }
     }

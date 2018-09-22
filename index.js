@@ -21,12 +21,12 @@ MongoClient.connect(url, {
   client.dbo = db.db("BotDB");
   client.dbo.createCollection("ByteballUsers_Name", function(err, res) {
     if (err) throw err;
-    client.dbo.createIndex("ByteballUsers_Use", "user_id", {
+    client.dbo.createIndex("ByteballUsers_Name", "user_id", {
       unique: true
     }, (er, res) => {
       if (er) throw er;
     });
-    client.dbo.createIndex("ByteballUsers_Use", "byte_address", {
+    client.dbo.createIndex("ByteballUsers_Name", "byte_address", {
       unique: true
     }, (er, res) => {
       if (er) throw er;

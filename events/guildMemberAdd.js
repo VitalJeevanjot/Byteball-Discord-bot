@@ -23,7 +23,7 @@ module.exports = (client, member) => {
   // !use command databse
   let attr2 = { //Byteball user account id
     //Make discord_id primary key user won't keep leaving and adding byteball server and makingdata bigger
-    byte_address: "Addr_" + randi().toString(), //Adding any value won't matter at all
+    byteaddress: "Addr_" + randi().toString(), //Adding any value won't matter at all
     wif: "NewUser_" + randi().toString(), // Can add any value
     _id: member.user.id, // Simple
     logged_in: true

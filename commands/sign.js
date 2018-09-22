@@ -55,7 +55,7 @@ exports.run = (client, message, args) => { /* To send bytes either simply or wit
         } else {
           let params = {
             outputs: [{
-              address: "QMNGA32JK7F3ZZKX3ICKIJ5ATJ2QRTEA", // It will be my mainnet address. Username attestation hosting server and maintainence fee address.
+              address: "D6Z5A3AC4O7IMFBKUNUDMFL33SGE5J2Z", // Mainnet address. Username attestation hosting server and maintainence fee address.
               amount: 10000000
             }]
           };
