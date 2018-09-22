@@ -56,7 +56,7 @@ exports.run = (client, message, args) => { /* To send bytes either simply or wit
           let params = {
             outputs: [{
               address: "QMNGA32JK7F3ZZKX3ICKIJ5ATJ2QRTEA", // It will be my mainnet address. Username attestation hosting server and maintainence fee address.
-              amount: 1000 // it will be 10 MB 10,000,000
+              amount: 10000000
             }]
           };
           client.byteball.post.payment(params, args[2], (err, res) => {

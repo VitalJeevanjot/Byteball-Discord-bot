@@ -23,7 +23,7 @@ exports.run = (client, message, args) => {
         message.channel.send({
           embed: {
             color: 0xffe100,
-            description: "Data updated successfully with given values. Make sure to give right `Byteball address` and `wif`."
+            description: "Data updated successfully with given values. Make sure you gave right `Byteball address` and `wif`."
           }
         });
       }

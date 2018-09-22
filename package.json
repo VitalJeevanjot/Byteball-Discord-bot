@@ -12,5 +12,8 @@
     "localStorage": "^1.0.3",
     "mongodb": "^3.1.4",
     "safe-localstorage": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0"
   }
 }

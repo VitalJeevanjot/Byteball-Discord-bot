@@ -59,7 +59,7 @@ exports.run = (client, message, args) => { /* To send bytes either simply or wit
       });
     }
   } else if (args.length == 3) { // after -u flag 1st argument should be username instead of byteball address(unique attested with byteball address) and how many bytes
-    if (args.indexOf("-u") >= -1) { //FOrmat :- !send -u <User_id> <amount>
+    if (args.indexOf("-u") >= -1) { //Format :- !send -u <User_id> <amount>
       client.dbo.collection("ByteballUsers_Name").find({
         user_id: args[1]
       }).toArray(function(err, res) {
